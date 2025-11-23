@@ -1,5 +1,9 @@
-from zeromq_lib import ZMQServer
+from zeromq_lib import ZMQPublisher
+import time
 
 if __name__ == "__main__":
-    server = ZMQServer()
-    server.start()
+    publisher = ZMQPublisher()
+
+    while True:
+        publisher.publish("Hello subscribers!")
+        time.sleep(1)

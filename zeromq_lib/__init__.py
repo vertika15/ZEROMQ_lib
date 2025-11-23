@@ -1,2 +1,2 @@
-from .server import ZMQServer
-from .client import ZMQClient
+from .server import ZMQPublisher
+from .client import ZMQSubscriber

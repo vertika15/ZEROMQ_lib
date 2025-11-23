@@ -1,5 +1,5 @@
-from zeromq_lib import ZMQClient
+from zeromq_lib import ZMQSubscriber
 
 if __name__ == "__main__":
-    client = ZMQClient()
-    client.send("Hello server")
+    subscriber = ZMQSubscriber(topic="")
+    subscriber.listen()
