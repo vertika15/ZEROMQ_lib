@@ -15,4 +15,4 @@ class ZMQPublisher:
     def publish(self, message):
         print(f"[PUBLISHER] Sending: {message}")
         self.socket.send_string(message)
-        time.sleep(0.1)  # prevents message drop
+        time.sleep(0.1)
