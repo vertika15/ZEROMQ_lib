@@ -2,4 +2,8 @@ from zeromq_lib import ZMQSubscriber
 
 if __name__ == "__main__":
     subscriber = ZMQSubscriber(topic="")
-    subscriber.listen()
+
+    try:
+        subscriber.listen()
+    except KeyboardInterrupt:
+        subscriber.stop()
